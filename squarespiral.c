@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
   }
   digits = 1;
   digitsub = 10;
-  while (digitsub <= m) {
+  while (digitsub < m) {
     digits++;
     digitsub *= 10;
   }
