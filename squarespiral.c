@@ -24,15 +24,12 @@ int main(int argc, char* argv[]) {
     printf("1 < n <= %u\n", MAXN);
     exit(0); 
   }
-  m = (2*n+1)*(2*n+1);
-  /*
-  for (uint64_t i = 0; i<m; i++) {
-    spiralify(&x, &y, i);
-    printf("%lu (%i, %i)\n", i,x,y);    
-  }
-  exit(0);
-  */
+  m = (uint64_t)(2*n+1)*(2*n+1);
   uint64_t *matrix = malloc(m*sizeof(uint64_t));
+  if (matrix == NULL) {
+    fprintf(stderr, "%s - Insufficient Memory!\n", argv[0]);
+    exit(1);
+  }
   digits = 1;
   digitsub = 10;
   while (digitsub <= m) {
