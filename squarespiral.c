@@ -4,6 +4,7 @@
 #include <time.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <math.h>
 #include <string.h>
 #include <assert.h>
 #include </home/simon/spiralify.c>
@@ -12,7 +13,9 @@
 // Sub is @ S(t) = u + vt for some u,v in Z
 // Check @ x(t) + y(t)t for t>=0 until equal to S(t).
 
-// gcc squarespiral.c -o squarespiral.bin -O3 -march=native -Wall -std=c11
+// gcc squarespiral.c -o squarespiral.bin -O3 -lm -march=native -Wall -std=c11
+
+#define MAXN 50000
 
 int main(int argc, char* argv[]) {
   uint32_t n = 3;
